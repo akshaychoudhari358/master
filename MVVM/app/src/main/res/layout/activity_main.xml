@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel"
+            type="com.example.mvvm.MainViewModel"/>
+    </data>
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textFirstName"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="188dp"
+        android:textSize="24sp"
+        android:text="@{viewModel.mMutableLiveDataFirstName}"/>
+
+    <TextView
+        android:id="@+id/textMiddleName"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFirstName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="190dp"
+        android:textSize="24sp"
+        android:text="@{viewModel.mMutableLiveDataMiddleName}"/>
+
+    <TextView
+        android:id="@+id/textLastName"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="190dp"
+        android:textSize="24sp"
+        android:text="@{viewModel.mMutableLiveDataLastName}" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="160dp"
+        android:onClick="@{()-> viewModel.onButtonClicked()}"
+        android:text="@{viewModel.mMutableLiveDataStatus}"/>
+</RelativeLayout>
+
+</layout>
