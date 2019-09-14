@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TabPracticle</string>
+    <string name="home_fragment">HOME FRAGMENT</string>
+    <string name="movie_fragment">MOVIE FRAGMENT</string>
+    <string name="sport_fragment">SPORT FRAGMENT</string>
+</resources>
